@@ -1,5 +1,5 @@
 ---
-- hosts: ansible-server
+- hosts: Ansible
   become: true
 
   tasks:
@@ -14,6 +14,6 @@
   - name: push image on to dockerhub
     command: docker push akashbkochure/simple-devops-image
 
-  - name: remove docker images form ansible server
+  - name: remove docker images form Ansible
     command: docker rmi simple-devops-image:latest akashbkochure/simple-devops-image
     ignore_errors: yes
